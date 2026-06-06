@@ -58,9 +58,6 @@ CuadernoDeAventurasTrekking/
 | 11 | Cerro San Ramón | 3.249m | Expedición |
 | 12 | Triple Corona | 1.635m (máx) | Expedición |
 
-## 💝 Dedicatoria
-
-Este cuaderno está dedicado a **Inés**.
 
 ---
 
