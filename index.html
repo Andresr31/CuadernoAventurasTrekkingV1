@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuaderno de Aventuras Trekking — Cumbres de Santiago</title>
+<meta name="description" content="Guía interactiva de trekking en Santiago de Chile. 12 cumbres documentadas con rutas, dificultad, equipamiento y consejos de seguridad.">
+<link rel="icon" href="https://em-content.zobj.net/source/apple/391/mountain_26f0-fe0f.png" type="image/png">
+<meta property="og:title" content="Cuaderno de Aventuras Trekking — Cumbres de Santiago">
+<meta property="og:description" content="12 cumbres documentadas para explorar Santiago desde arriba. Rutas, equipamiento, consejos y mucho cerro.">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Santiago_de_Chile%2C_Desde_Cerro_San_Crist%C3%B3bal_%28cropped_panorama%29.jpg/1280px-Santiago_de_Chile%2C_Desde_Cerro_San_Crist%C3%B3bal_%28cropped_panorama%29.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#efe8d8;--paper-2:#e8dfca;--paper-deep:#d9ceb1;
+  --ink:#1c1b18;--ink-soft:#3a3730;
+  --moss:#2f4a32;--moss-deep:#1f3422;
+  --ochre:#c4622d;--ochre-deep:#8a3f17;--rust:#6b2818;
+  --line:#2f2c25;--line-soft:rgba(28,27,24,.18);
+  --shadow:0 1px 0 rgba(28,27,24,.06),0 12px 24px -16px rgba(28,27,24,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{background:var(--paper);color:var(--ink);font-family:'EB Garamond',serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{
+  background:radial-gradient(ellipse 80% 50% at 20% 0%,rgba(196,98,45,.08),transparent 60%),radial-gradient(ellipse 60% 50% at 90% 100%,rgba(47,74,50,.10),transparent 60%),var(--paper);
+  background-attachment:fixed;position:relative;overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.3;z-index:1;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");mix-blend-mode:multiply}
+.stage{position:relative;z-index:2}
+h1,h2,h3,h4,.display{font-family:'Fraunces',serif;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1;color:var(--ink)}
+.mono{font-family:'JetBrains Mono',monospace;font-feature-settings:"ss01"}
+
+/* ─── HEADER ─── */
+header.masthead{border-bottom:1.5px solid var(--ink);padding:14px 32px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;background:var(--paper);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
+.masthead .brand{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:-.01em;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1}
+.masthead .brand span{font-style:italic;font-weight:400;color:var(--ochre-deep)}
+.masthead nav{display:flex;gap:8px;align-items:center}
+.masthead nav a{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:6px 12px;border:1px solid transparent;border-radius:100px;transition:all .3s ease}
+.masthead nav a:hover{border-color:var(--ink);color:var(--ink)}
+.masthead nav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.masthead .meta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:24px}
+.masthead .meta b{color:var(--moss-deep);font-weight:500}
+
+/* ─── HERO ─── */
+.hero{padding:96px 32px 80px;max-width:1400px;margin:0 auto;position:relative;border-bottom:1px solid var(--line-soft)}
+.hero .kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ochre-deep);margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.hero .kicker::before,.hero .kicker::after{content:"";flex:0 0 60px;height:1px;background:var(--ochre-deep)}
+.hero h1{font-size:clamp(52px,10vw,160px);line-height:.84;font-weight:400;letter-spacing:-.045em;font-variation-settings:"opsz" 144,"SOFT" 70,"WONK" 1;margin-bottom:56px;position:relative}
+.hero h1 .line{display:block;position:relative}
+.hero h1 .accent{font-style:italic;color:var(--ochre);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.hero h1 .ampersand{font-style:italic;color:var(--moss-deep);font-weight:300;font-size:.7em;display:inline-block;transform:translateY(-.05em) rotate(-4deg);margin:0 .05em;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.hero-lead{display:grid;grid-template-columns:1.2fr auto 1.4fr;gap:48px;align-items:start;margin-bottom:72px;padding-top:32px;border-top:1.5px solid var(--ink)}
+.hero-lead .pull-quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(22px,2.6vw,36px);line-height:1.15;color:var(--ink);font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1;position:relative;padding-top:24px}
+.hero-lead .pull-quote::before{content:"❝";position:absolute;top:-30px;left:-12px;font-size:96px;color:var(--ochre);line-height:1;font-family:'Fraunces',serif;font-weight:300;opacity:.5}
+.hero-lead .pull-quote em{font-style:italic;color:var(--ochre-deep)}
+.hero-lead .pull-quote .sig{display:block;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft);margin-top:24px;padding-top:12px;border-top:1px solid var(--line-soft)}
+.hero-lead .divider{width:1px;background:var(--line-soft);align-self:stretch;position:relative}
+.hero-lead .divider::before,.hero-lead .divider::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;border:1px solid var(--ink);background:var(--paper)}
+.hero-lead .divider::before{top:0}.hero-lead .divider::after{bottom:0}
+.hero-lead .body-text{font-size:19px;line-height:1.55;color:var(--ink-soft)}
+.hero-lead .body-text p{margin-bottom:16px}
+.hero-lead .body-text .dropcap{font-family:'Fraunces',serif;font-size:76px;line-height:.8;float:left;margin:6px 12px -4px 0;color:var(--moss-deep);font-weight:500;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1}
+.hero-lead .body-text b{color:var(--ink);font-weight:600}
+.hero-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink);padding-top:24px;gap:32px}
+.hero-strip .cell .num{font-family:'Fraunces',serif;font-size:56px;line-height:1;color:var(--moss-deep);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 60;display:block;margin-bottom:4px}
+.hero-strip .cell .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft)}
+.contours{position:absolute;right:-120px;top:40px;width:480px;height:480px;opacity:.35;pointer-events:none;z-index:-1}
+
+/* ─── SECTIONS ─── */
+.index-section,.peak-section,.decide-section{max-width:1400px;margin:0 auto;padding:80px 32px;border-bottom:1px solid var(--line-soft)}
+.section-head{display:grid;grid-template-columns:80px 1fr auto;align-items:end;gap:24px;margin-bottom:56px;padding-bottom:16px;border-bottom:1.5px solid var(--ink)}
+.section-head .roman{font-family:'Fraunces',serif;font-style:italic;font-size:64px;line-height:.9;color:var(--ochre);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1}
+.section-head h2{font-size:clamp(32px,5vw,56px);line-height:.95;letter-spacing:-.03em;font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+.section-head .note{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);text-align:right}
+
+/* ─── INDEX LIST ─── */
+.index-list{display:flex;flex-direction:column;gap:2px}
+.index-row{display:grid;grid-template-columns:70px 1.6fr 1fr 110px 70px;align-items:center;gap:24px;padding:26px 20px;border-bottom:1px solid var(--line-soft);position:relative;cursor:pointer;text-decoration:none;color:var(--ink);overflow:hidden;transition:background .35s cubic-bezier(.2,.6,.2,1)}
+.index-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ochre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.index-row::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(196,98,45,.06) 0%,transparent 70%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.index-row:hover{background:rgba(47,74,50,.04)}
+.index-row:hover::before{transform:scaleY(1)}
+.index-row:hover::after{opacity:1}
+.index-row:hover .idx-name-main{transform:translateX(8px);color:var(--moss-deep)}
+.index-row:hover .idx-arrow{transform:translateX(12px);color:var(--ochre)}
+.idx-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);letter-spacing:.1em;transition:color .3s ease}
+.idx-num .hash{color:var(--ochre-deep);font-weight:500}
+.idx-num .nzero{opacity:.4}
+.index-row:hover .idx-num{color:var(--ochre)}
+.idx-name-main{font-family:'Fraunces',serif;font-size:28px;line-height:1;font-weight:400;letter-spacing:-.015em;font-variation-settings:"opsz" 144,"SOFT" 40,"WONK" 1;transition:color .3s ease,transform .35s ease;display:block}
+.idx-name-sub{font-family:'EB Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:6px;display:block;font-weight:400}
+.idx-tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-block;padding:5px 11px;border:1px solid var(--ink);border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:500}
+.pill.easy{border-color:var(--moss-deep);color:var(--moss-deep)}
+.pill.medium{border-color:var(--ochre-deep);color:var(--ochre-deep)}
+.pill.hard{border-color:var(--rust);color:var(--rust)}
+.pill.epic{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.idx-meta-line{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px}
+.idx-alt{text-align:right;font-family:'Fraunces',serif;font-size:28px;color:var(--moss-deep);font-weight:400;line-height:1;font-variation-settings:"opsz" 144,"SOFT" 50}
+.idx-alt .unit{font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--ink-soft);margin-left:2px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:4px;font-weight:400}
+.idx-arrow{display:flex;align-items:center;justify-content:flex-end;font-size:24px;color:var(--ink-soft);transition:transform .35s cubic-bezier(.2,.6,.2,1),color .3s ease}
+
+/* ─── LEGEND ─── */
+.legend{margin-top:56px;padding:28px;border:1.5px solid var(--ink);background:var(--paper-2);display:grid;grid-template-columns:180px repeat(4,1fr);align-items:center;gap:28px}
+.legend .lhead{font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--ink);border-right:1px solid var(--line);padding-right:24px;line-height:1.1;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1}
+.legend .litem b{display:block;font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin-top:10px;margin-bottom:4px}
+.legend .litem span.desc{font-family:'EB Garamond',serif;font-size:13px;color:var(--ink-soft);line-height:1.4;font-style:italic;display:block}
+
+/* ─── PEAK CARDS ─── */
+.peak{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;margin-bottom:56px;position:relative;align-items:start}
+.peak:last-child{margin-bottom:0}
+.peak-marker{position:relative}
+.peak-marker .ficha{border:1.5px solid var(--ink);background:var(--paper);padding:32px;box-shadow:var(--shadow);position:sticky;top:80px}
+.peak-marker .ficha::before{content:"";position:absolute;inset:8px;border:1px solid var(--line-soft);pointer-events:none}
+.peak-marker .stamp{position:absolute;top:-18px;right:-18px;width:84px;height:84px;border:1.5px solid var(--ochre-deep);color:var(--ochre-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;transform:rotate(-8deg);background:var(--paper);text-align:center;line-height:1.1;z-index:3}
+.ficha-head{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px;padding-bottom:16px;border-bottom:1px dashed var(--line-soft);display:flex;justify-content:space-between}
+.ficha-head b{color:var(--ochre-deep);font-weight:500}
+.peak-marker .ficha h3{font-size:44px;line-height:.9;letter-spacing:-.025em;font-weight:400;margin-bottom:8px;font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
+.peak-marker .ficha h3 em{font-style:italic;color:var(--ochre-deep);font-weight:300}
+.peak-marker .ficha .latin{font-style:italic;color:var(--ink-soft);font-size:15px;margin-bottom:32px}
+.data-rows{border-top:1.5px solid var(--ink)}
+.data-row{display:grid;grid-template-columns:130px 1fr;padding:12px 0;border-bottom:1px dotted var(--line-soft);align-items:baseline;gap:16px}
+.data-row .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.data-row .val{font-family:'Fraunces',serif;font-size:17px;color:var(--ink);font-weight:400}
+.data-row .val .unit{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-soft);letter-spacing:.1em;margin-left:2px}
+.peak-topo{margin-top:24px;padding:20px;border:1px solid var(--line-soft);background:var(--paper-2);aspect-ratio:16/9;position:relative;overflow:hidden}
+.peak-topo svg{width:100%;height:100%;display:block}
+.peak-body{padding-top:12px}
+.peak-body .num-tag{font-family:'Fraunces',serif;font-style:italic;font-size:96px;line-height:.8;color:var(--moss-deep);margin-bottom:8px;font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;letter-spacing:-.04em}
+.peak-body .tagline{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);margin-bottom:32px;max-width:90%;font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 70,"WONK" 1}
+.peak-body p{margin-bottom:18px;font-size:18px;line-height:1.65;color:var(--ink-soft)}
+.peak-body p:first-of-type::first-line{font-variant:small-caps;letter-spacing:.04em;color:var(--ink)}
+.peak-body strong{color:var(--moss-deep);font-weight:600}
+.peak-info-grid{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:24px;background:var(--paper-2);border-left:3px solid var(--moss-deep)}
+.peak-info-grid .col h4{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre-deep);margin-bottom:12px}
+.peak-info-grid .col p{font-size:15px;line-height:1.55;color:var(--ink);margin:0}
+.peak.reverse{grid-template-columns:1.4fr 1fr}
+.peak.reverse .peak-marker{order:2}
+.peak.reverse .peak-body{order:1;padding-right:32px}
+
+/* ─── DETAIL TOGGLE ─── */
+.detail-toggle{margin-top:32px;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;background:transparent;border:1.5px solid var(--ink);border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:all .3s ease;font-weight:500}
+.detail-toggle:hover{background:var(--ink);color:var(--paper)}
+.detail-toggle .toggle-icon{display:inline-block;width:14px;height:14px;position:relative}
+.detail-toggle .toggle-icon::before,.detail-toggle .toggle-icon::after{content:"";position:absolute;background:currentColor}
+.detail-toggle .toggle-icon::before{top:50%;left:0;right:0;height:1.5px;transform:translateY(-50%)}
+.detail-toggle .toggle-icon::after{left:50%;top:0;bottom:0;width:1.5px;transform:translateX(-50%);transition:transform .35s ease}
+.detail-toggle.open .toggle-icon::after{transform:translateX(-50%) scaleY(0)}
+.detail-toggle .toggle-text-close{display:none}
+.detail-toggle.open .toggle-text-open{display:none}
+.detail-toggle.open .toggle-text-close{display:inline}
+.detail-panel{max-height:0;overflow:hidden;opacity:0;margin-top:0;transition:max-height .6s cubic-bezier(.2,.6,.2,1),opacity .4s ease,margin-top .4s ease}
+.detail-panel.open{max-height:8000px;opacity:1;margin-top:40px}
+.detail-panel-inner{padding:40px;background:var(--paper-2);border:1px solid var(--line-soft);border-left:4px solid var(--ochre);position:relative}
+.detail-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ochre-deep);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.detail-eyebrow::before{content:"";display:inline-block;width:32px;height:1px;background:var(--ochre-deep)}
+.detail-title{font-family:'Fraunces',serif;font-size:32px;line-height:1;font-weight:400;font-style:italic;margin-bottom:28px;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1;color:var(--ink)}
+
+/* ─── ROUTES ─── */
+.routes-list{display:flex;flex-direction:column;gap:0;margin-bottom:40px}
+.route-card{display:grid;grid-template-columns:50px 1fr;gap:24px;padding:24px 0;border-bottom:1px dashed var(--line-soft);align-items:start}
+.route-card:last-child{border-bottom:none}
+.route-card .r-num{font-family:'Fraunces',serif;font-size:36px;line-height:1;color:var(--ochre);font-style:italic;font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.route-card .r-content h5{font-family:'Fraunces',serif;font-size:22px;line-height:1.1;font-weight:500;margin-bottom:4px;letter-spacing:-.01em;font-variation-settings:"opsz" 144,"SOFT" 40,"WONK" 1}
+.route-card .r-content h5 .r-status{display:inline-block;margin-left:10px;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;border:1px solid var(--moss-deep);color:var(--moss-deep);border-radius:100px;vertical-align:middle;font-weight:500}
+.route-card .r-content h5 .r-status.closed{border-color:var(--rust);color:var(--rust)}
+.route-card .r-tagline{font-style:italic;color:var(--ink-soft);font-size:14px;margin-bottom:14px}
+.route-stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line-soft);padding-top:10px;margin-bottom:12px}
+.route-stats .rs{flex:1 1 auto;min-width:100px;padding-right:16px}
+.route-stats .rs .l{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:2px}
+.route-stats .rs .v{font-family:'Fraunces',serif;font-size:16px;color:var(--ink);font-weight:500}
+.route-card .r-desc{font-size:15px;line-height:1.55;color:var(--ink)}
+.route-card .r-desc b{color:var(--moss-deep);font-weight:600}
+
+/* ─── TRIVIA ─── */
+.trivia-section{margin-top:32px;padding-top:32px;border-top:1.5px solid var(--ink)}
+.trivia-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}
+.trivia-card{padding:24px;background:var(--paper);border:1px solid var(--line-soft);position:relative}
+.trivia-card .t-num{position:absolute;top:-12px;left:20px;background:var(--ink);color:var(--paper);padding:4px 10px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.trivia-card .t-title{font-family:'Fraunces',serif;font-size:19px;line-height:1.15;font-weight:500;margin:8px 0 10px;color:var(--moss-deep);font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+.trivia-card .t-body{font-size:14.5px;line-height:1.6;color:var(--ink-soft)}
+.trivia-card .t-body em{color:var(--ochre-deep);font-style:italic;font-weight:500}
+
+/* ─── MANUAL / GEAR ─── */
+.manual-section{background:var(--ink);color:var(--paper);padding:100px 32px;position:relative;overflow:hidden}
+.manual-section::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 40px,rgba(239,232,216,.04) 40px,rgba(239,232,216,.04) 41px),repeating-linear-gradient(0deg,transparent 0,transparent 40px,rgba(239,232,216,.04) 40px,rgba(239,232,216,.04) 41px)}
+.manual-section .inner{max-width:1400px;margin:0 auto;position:relative;z-index:2}
+.manual-section h2{color:var(--paper);font-size:clamp(48px,7vw,80px);line-height:.9;letter-spacing:-.03em;margin-bottom:16px;font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
+.manual-section h2 em{color:var(--ochre);font-style:italic;font-weight:300}
+.manual-section .sub{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--paper-deep);margin-bottom:64px;padding-bottom:24px;border-bottom:1px solid rgba(239,232,216,.2)}
+.gear-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.gear-card{border:1px solid rgba(239,232,216,.2);padding:28px;position:relative;transition:background .3s ease,transform .3s ease}
+.gear-card:hover{background:rgba(196,98,45,.08);transform:translateY(-4px)}
+.gear-card .gnum{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--ochre);margin-bottom:20px}
+.gear-card .gicon{font-size:36px;margin-bottom:16px;display:block}
+.gear-card h4{font-family:'Fraunces',serif;color:var(--paper);font-size:26px;font-weight:400;line-height:1;margin-bottom:8px;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+.gear-card h4 em{color:var(--paper-deep);font-style:italic;font-weight:300}
+.gear-card p{font-family:'EB Garamond',serif;font-size:15px;line-height:1.5;color:var(--paper-deep);margin-top:12px}
+.gear-card ul{list-style:none;margin-top:12px;font-size:14px;color:var(--paper-deep)}
+.gear-card ul li{padding:4px 0;border-bottom:1px dotted rgba(239,232,216,.15);font-family:'EB Garamond',serif}
+.gear-card ul li:last-child{border:none}
+.gear-card ul li::before{content:"›";color:var(--ochre);margin-right:8px;font-weight:bold}
+
+/* ─── DECIDE ─── */
+.decide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.decide-card{border:1.5px solid var(--ink);background:var(--paper);padding:36px 32px;position:relative;transition:transform .3s ease,box-shadow .3s ease}
+.decide-card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -20px rgba(28,27,24,.4)}
+.decide-card .q{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre-deep);margin-bottom:16px}
+.decide-card h3{font-family:'Fraunces',serif;font-size:32px;line-height:1;font-weight:400;margin-bottom:24px;font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1}
+.decide-card .answer{font-family:'Fraunces',serif;font-size:22px;line-height:1.15;color:var(--moss-deep);font-weight:500;border-top:1.5px solid var(--ink);padding-top:20px;margin-bottom:12px}
+.decide-card p{font-size:15px;line-height:1.55;color:var(--ink-soft);font-style:italic}
+
+/* ─── SEASONS ─── */
+.season-section{background:var(--paper-2);padding:100px 32px;border-bottom:1.5px solid var(--ink)}
+.season-inner{max-width:1400px;margin:0 auto}
+.season-table{margin-top:56px;background:var(--paper);border:1.5px solid var(--ink);overflow-x:auto}
+.season-row{display:grid;grid-template-columns:200px repeat(4,1fr);border-bottom:1px solid var(--line-soft)}
+.season-row:last-child{border-bottom:none}
+.season-row.head{background:var(--ink);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.season-row>div{padding:20px 24px;border-right:1px solid var(--line-soft)}
+.season-row>div:last-child{border-right:none}
+.season-row .label{font-family:'Fraunces',serif;font-size:22px;font-weight:400;font-style:italic;color:var(--moss-deep);background:var(--paper-2);font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
+.season-row.head .label{background:var(--ink);color:var(--paper);font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11px}
+.season-row .cell{font-size:15px;line-height:1.4}
+.season-row .cell b{font-family:'Fraunces',serif;font-size:18px;display:block;margin-bottom:4px}
+.season-row .cell .verdict{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;border-radius:100px;margin-top:6px}
+.verdict.good{background:var(--moss);color:var(--paper)}
+.verdict.ok{background:#c9a878;color:var(--ink)}
+.verdict.bad{background:var(--rust);color:var(--paper)}
+
+/* ─── WEATHER WIDGET ─── */
+.weather-section{max-width:1400px;margin:0 auto;padding:80px 32px;border-bottom:1px solid var(--line-soft)}
+.weather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.weather-card{background:var(--paper-2);border:1px solid var(--line-soft);padding:28px;text-align:center;transition:transform .3s ease}
+.weather-card:hover{transform:translateY(-4px)}
+.weather-card .w-icon{font-size:48px;margin-bottom:12px;display:block}
+.weather-card .w-temp{font-family:'Fraunces',serif;font-size:36px;color:var(--moss-deep);font-weight:400;margin-bottom:4px}
+.weather-card .w-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.weather-card .w-detail{font-size:14px;color:var(--ink-soft);margin-top:12px;font-style:italic}
+
+/* ─── MOTIVATIONAL QUOTES ─── */
+.quotes-section{max-width:1400px;margin:0 auto;padding:80px 32px;text-align:center;border-bottom:1px solid var(--line-soft)}
+.quote-carousel{position:relative;min-height:200px;display:flex;align-items:center;justify-content:center}
+.quote-item{position:absolute;opacity:0;transition:opacity 1s ease;max-width:800px;padding:0 24px}
+.quote-item.active{opacity:1;position:relative}
+.quote-item blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.5vw,42px);line-height:1.2;color:var(--ink);font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1;margin-bottom:16px}
+.quote-item cite{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ochre-deep);font-style:normal}
+.quote-dots{display:flex;gap:8px;justify-content:center;margin-top:32px}
+.quote-dots button{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;transition:background .3s ease}
+.quote-dots button.active{background:var(--ochre)}
+
+/* ─── EMERGENCY ─── */
+.emergency-section{background:var(--ochre);color:var(--ink);padding:80px 32px;position:relative;overflow:hidden}
+.emergency-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(45deg,transparent 0,transparent 18px,rgba(28,27,24,.06) 18px,rgba(28,27,24,.06) 19px)}
+.emergency-inner{max-width:1400px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.emergency-inner h2{font-size:clamp(48px,7vw,88px);line-height:.85;letter-spacing:-.03em;color:var(--ink);font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1;margin-bottom:16px}
+.emergency-inner h2 em{font-style:italic;color:var(--rust);font-weight:300}
+.emergency-inner .lede{font-style:italic;font-size:20px;line-height:1.4;color:var(--ink)}
+.em-item{display:grid;grid-template-columns:auto 1fr auto;gap:24px;padding:24px 0;border-bottom:1.5px solid var(--ink);align-items:center}
+.em-item:first-child{border-top:1.5px solid var(--ink)}
+.em-item .org{font-family:'Fraunces',serif;font-size:28px;font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+.em-item .desc{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-soft)}
+.em-item .number{font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:700;color:var(--rust);letter-spacing:-.02em}
+
+/* ─── DEDICATION ─── */
+.dedication-section{max-width:800px;margin:0 auto;padding:100px 32px;text-align:center}
+.dedication-section .ded-icon{font-size:48px;margin-bottom:24px;display:block}
+.dedication-section h3{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,48px);font-style:italic;color:var(--moss-deep);font-weight:400;margin-bottom:16px;font-variation-settings:"opsz" 144,"SOFT" 80,"WONK" 1}
+.dedication-section p{font-size:20px;line-height:1.6;color:var(--ink-soft);font-style:italic;max-width:600px;margin:0 auto}
+.dedication-section .ded-sig{margin-top:32px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ochre-deep)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--ink);color:var(--paper-deep);padding:60px 32px 32px}
+.footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;border-bottom:1px solid rgba(239,232,216,.15);padding-bottom:40px;margin-bottom:24px}
+footer h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ochre);margin-bottom:20px}
+footer ul{list-style:none}
+footer ul li{padding:6px 0;font-family:'EB Garamond',serif;font-size:14px}
+footer ul li a{color:var(--paper-deep);text-decoration:none;border-bottom:1px dotted transparent;transition:border-color .2s}
+footer ul li a:hover{border-color:var(--ochre)}
+footer .colophon{font-family:'Fraunces',serif;font-style:italic;font-size:24px;line-height:1.3;color:var(--paper);max-width:480px;font-variation-settings:"opsz" 144,"SOFT" 80}
+.footer-bottom{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--paper-deep)}
+
+/* ─── BACK TO TOP ─── */
+.back-to-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:var(--ink);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px);transition:opacity .3s ease,transform .3s ease;z-index:100;box-shadow:0 4px 16px rgba(28,27,24,.3)}
+.back-to-top.visible{opacity:1;transform:translateY(0)}
+.back-to-top:hover{background:var(--ochre)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .index-row{grid-template-columns:60px 1.6fr 100px 50px;gap:16px}
+  .idx-tags{display:none}
+}
+@media(max-width:900px){
+  .hero{padding:48px 20px 40px}
+  .hero h1{font-size:52px}
+  .hero-lead{grid-template-columns:1fr;gap:32px}
+  .hero-lead .divider{height:1px;width:100%;background:var(--line-soft)}
+  .hero-lead .pull-quote{font-size:22px}
+  .hero-strip{grid-template-columns:repeat(2,1fr);gap:20px}
+  .section-head{grid-template-columns:60px 1fr;gap:16px}
+  .section-head .roman{font-size:44px}
+  .section-head h2{font-size:32px}
+  .section-head .note{display:none}
+  .index-section,.peak-section,.decide-section{padding:48px 20px}
+  .index-row{grid-template-columns:50px 1fr 50px;gap:12px;padding:22px 12px}
+  .idx-name-main{font-size:22px}
+  .idx-alt,.idx-tags{display:none}
+  .legend{grid-template-columns:1fr;gap:16px}
+  .legend .lhead{border-right:none;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:12px}
+  .peak,.peak.reverse{grid-template-columns:1fr;gap:32px}
+  .peak.reverse .peak-marker,.peak.reverse .peak-body{order:initial}
+  .peak.reverse .peak-body{padding-right:0}
+  .peak-body .num-tag{font-size:64px}
+  .peak-body .tagline{font-size:22px}
+  .peak-marker .ficha{position:static}
+  .peak-marker .ficha h3{font-size:34px}
+  .peak-info-grid{grid-template-columns:1fr}
+  .detail-panel-inner{padding:24px}
+  .trivia-grid{grid-template-columns:1fr}
+  .route-card{grid-template-columns:40px 1fr;gap:16px}
+  .manual-section{padding:60px 20px}
+  .gear-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .gear-card{padding:20px}
+  .decide-grid{grid-template-columns:1fr;gap:16px}
+  .season-row{grid-template-columns:100px repeat(4,1fr)}
+  .season-row>div{padding:12px 8px}
+  .season-row .label{font-size:14px}
+  .season-row .cell b{font-size:14px}
+  .emergency-inner{grid-template-columns:1fr;gap:32px}
+  .emergency-inner h2{font-size:48px}
+  .em-item{grid-template-columns:1fr;gap:8px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .masthead{padding:10px 16px;flex-wrap:wrap;gap:12px}
+  .masthead .meta{font-size:9px;gap:12px}
+  .masthead nav{display:none}
+  .contours{display:none}
+  .weather-grid{grid-template-columns:1fr}
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}.reveal-d5{transition-delay:.5s}
+
+/* ─── PROGRESS BAR ─── */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--ochre),var(--moss-deep));z-index:100;width:0%;transition:width .1s linear}
+
+/* ─── PEAK PHOTO LINK ─── */
+.peak-photo-link{margin-top:20px;display:inline-flex;align-items:center;gap:10px;padding:12px 20px;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:4px;text-decoration:none;color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;transition:all .3s ease}
+.peak-photo-link:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.peak-photo-link .ppl-icon{font-size:16px}
+.peak-photo-link .ppl-text{text-transform:uppercase}
+.peak-photo-link .ppl-arrow{margin-left:auto;transition:transform .3s ease}
+.peak-photo-link:hover .ppl-arrow{transform:translateX(4px)}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="stage">
+
+<!-- ─── MASTHEAD ─── -->
+<header class="masthead">
+  <div class="brand">Cuaderno de Aventuras <span>— Trekking Santiago</span></div>
+  <nav>
+    <a href="#indice" class="active">Índice</a>
+    <a href="#fichas">Fichas</a>
+    <a href="#manual">Equipo</a>
+    <a href="#estaciones">Estaciones</a>
+    <a href="#emergencia">Emergencia</a>
+  </nav>
+  <div class="meta">
+    <span>Vol. <b>I</b></span>
+    <span>Junio <b>2026</b></span>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="inicio">
+  <svg class="contours" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#2f4a32" stroke-width="0.6" fill="none" opacity="0.7">
+      <path d="M 200 50 Q 280 60, 320 130 Q 360 200, 320 280 Q 280 340, 200 360 Q 120 340, 80 280 Q 40 200, 80 130 Q 120 60, 200 50 Z"/>
+      <path d="M 200 80 Q 270 90, 305 150 Q 335 200, 305 260 Q 270 320, 200 335 Q 130 320, 95 260 Q 65 200, 95 150 Q 130 90, 200 80 Z"/>
+      <path d="M 200 110 Q 260 120, 290 160 Q 315 200, 290 250 Q 260 295, 200 310 Q 140 295, 110 250 Q 85 200, 110 160 Q 140 120, 200 110 Z"/>
+      <path d="M 200 140 Q 245 150, 270 175 Q 290 200, 270 230 Q 245 265, 200 280 Q 155 265, 130 230 Q 110 200, 130 175 Q 155 150, 200 140 Z"/>
+      <path d="M 200 170 Q 232 180, 250 195 Q 265 200, 250 220 Q 232 245, 200 250 Q 168 245, 150 220 Q 135 200, 150 195 Q 168 180, 200 170 Z"/>
+      <circle cx="200" cy="210" r="14"/>
+      <path d="M 196 196 L 200 178 L 204 196 L 200 200 Z" fill="#c4622d" stroke="#c4622d"/>
+    </g>
+  </svg>
+
+  <div class="kicker reveal">Guía de rutas — Región Metropolitana, Chile</div>
+
+  <h1 class="reveal reveal-d1">
+    <span class="line">Doce <span class="accent">cumbres</span>,</span>
+    <span class="line">una ciudad <span class="ampersand">&amp;</span></span>
+    <span class="line">un cuaderno <span class="accent">honesto.</span></span>
+  </h1>
+
+  <div class="hero-lead">
+    <div class="pull-quote reveal reveal-d2">
+      <em>"No subes un cerro para conquistarlo.</em><br>
+      Lo subes para que el cerro te deje <em>volver a casa distinto."</em>
+      <span class="sig">— Regla N°1 del cuaderno</span>
+    </div>
+    <div class="divider"></div>
+    <div class="body-text reveal reveal-d3">
+      <p><span class="dropcap">D</span>esde el cerro que se sube en zapatillas urbanas hasta la palma chilena en la que <b>Darwin</b> se sentó a tomar notas en 1834, esta guía documenta doce cumbres alcanzables desde Santiago en jornadas que van de dos horas a dos días enteros.</p>
+      <p>No es una lista de Instagram ni un ranking. Es un cuaderno con <b>distancias verificadas</b>, accesos vigentes a junio de 2026, advertencias reales y la única verdad que importa cuando estás arriba — cuándo darse la vuelta.</p>
+    </div>
+  </div>
+
+  <div class="hero-strip">
+    <div class="cell reveal reveal-d3"><span class="num">12</span><span class="lbl">Cumbres documentadas</span></div>
+    <div class="cell reveal reveal-d3"><span class="num">3.249<span style="font-size:18px;color:var(--ink-soft)"> m</span></span><span class="lbl">Cumbre más alta</span></div>
+    <div class="cell reveal reveal-d4"><span class="num">880<span style="font-size:18px;color:var(--ink-soft)"> m</span></span><span class="lbl">Cumbre más baja</span></div>
+    <div class="cell reveal reveal-d5"><span class="num">$0</span><span class="lbl">Costo de la mayoría</span></div>
+  </div>
+</section>
+
+<!-- ─── FRASES MOTIVANTES ─── -->
+<section class="quotes-section" id="frases">
+  <div class="section-head" style="justify-content:center;grid-template-columns:auto;text-align:center;border-bottom:none;margin-bottom:32px">
+    <h2 style="font-size:clamp(24px,3vw,36px);font-style:italic;color:var(--moss-deep)">Palabras para el camino</h2>
+  </div>
+  <div class="quote-carousel" id="quoteCarousel">
+    <div class="quote-item active">
+      <blockquote>"La montaña no se mide en metros. Se mide en lo que dejaste de ser al bajar."</blockquote>
+      <cite>— Sabiduría de sendero</cite>
+    </div>
+    <div class="quote-item">
+      <blockquote>"Cada paso hacia arriba es un paso hacia adentro."</blockquote>
+      <cite>— Proverbio de montaña</cite>
+    </div>
+    <div class="quote-item">
+      <blockquote>"No hay cumbre que no comience con un primer paso incierto."</blockquote>
+      <cite>— Cuaderno de campo</cite>
+    </div>
+    <div class="quote-item">
+      <blockquote>"El cerro no te pide velocidad. Te pide presencia."</blockquote>
+      <cite>— Guía anónimo, Cajón del Maipo</cite>
+    </div>
+    <div class="quote-item">
+      <blockquote>"Sube ligero, baja humilde. La montaña siempre gana."</blockquote>
+      <cite>— Tradición andina</cite>
+    </div>
+  </div>
+  <div class="quote-dots" id="quoteDots"></div>
+</section>
+
+<!-- ─── ÍNDICE ─── -->
+<section class="index-section" id="indice">
+  <div class="section-head">
+    <div class="roman">i.</div>
+    <h2>El índice — doce cumbres, una ciudad</h2>
+    <div class="note">Ordenadas por exigencia<br>↓ menor a mayor</div>
+  </div>
+
+  <div class="index-list">
+    <a class="index-row reveal" href="#sancristobal">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>1</div>
+      <div class="idx-name-block"><span class="idx-name-main">San Cristóbal</span><span class="idx-name-sub">El cerro de la Virgen — para empezar siempre por aquí</span></div>
+      <div class="idx-tags"><span class="pill easy">Iniciación</span><span class="idx-meta-line">2–3 h · 5 km</span></div>
+      <div class="idx-alt">880<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#manquehuito">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>2</div>
+      <div class="idx-name-block"><span class="idx-name-main">Manquehuito</span><span class="idx-name-sub">El hijo chico del Manquehue — apto para familias</span></div>
+      <div class="idx-tags"><span class="pill easy">Iniciación</span><span class="idx-meta-line">2–3 h · 4.4 km</span></div>
+      <div class="idx-alt">1.319<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#aguasramon">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>3</div>
+      <div class="idx-name-block"><span class="idx-name-main">Quebrada de Ramón</span><span class="idx-name-sub">Bosque, agua y una catarata escondida</span></div>
+      <div class="idx-tags"><span class="pill easy">Iniciación</span><span class="idx-meta-line">4–5 h · 14 km</span></div>
+      <div class="idx-alt">1.150<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#pochoco">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>4</div>
+      <div class="idx-name-block"><span class="idx-name-main">Pochoco</span><span class="idx-name-sub">El entrenador clandestino de Lo Barnechea</span></div>
+      <div class="idx-tags"><span class="pill medium">Intermedio</span><span class="idx-meta-line">3–4 h · 6 km</span></div>
+      <div class="idx-alt">1.804<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#manquehue">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>5</div>
+      <div class="idx-name-block"><span class="idx-name-main">Manquehue</span><span class="idx-name-sub">Lugar de cóndores — la cumbre que mira Santiago</span></div>
+      <div class="idx-tags"><span class="pill medium">Intermedio</span><span class="idx-meta-line">4–5 h · 6.4 km</span></div>
+      <div class="idx-alt">1.635<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#carbon">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>6</div>
+      <div class="idx-name-block"><span class="idx-name-main">Cerro Carbón</span><span class="idx-name-sub">El siguiente paso natural después del Manquehue</span></div>
+      <div class="idx-tags"><span class="pill medium">Intermedio</span><span class="idx-meta-line">4–5 h · 8 km</span></div>
+      <div class="idx-alt">1.520<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#penon">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>7</div>
+      <div class="idx-name-block"><span class="idx-name-main">Cerro El Peñón</span><span class="idx-name-sub">Vista privilegiada al cordón de los Andes</span></div>
+      <div class="idx-tags"><span class="pill medium">Intermedio</span><span class="idx-meta-line">5–6 h · 8 km</span></div>
+      <div class="idx-alt">1.940<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#vizcachas">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>8</div>
+      <div class="idx-name-block"><span class="idx-name-main">Alto Las Vizcachas</span><span class="idx-name-sub">Una cumbre con audiencia peluda</span></div>
+      <div class="idx-tags"><span class="pill hard">Avanzado</span><span class="idx-meta-line">7–9 h · 16 km</span></div>
+      <div class="idx-alt">1.854<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#campana">
+      <div class="idx-num"><span class="hash">N°</span><span class="nzero">0</span>9</div>
+      <div class="idx-name-block"><span class="idx-name-main">La Campana</span><span class="idx-name-sub">La cumbre que Darwin escaló en 1834</span></div>
+      <div class="idx-tags"><span class="pill hard">Avanzado</span><span class="idx-meta-line">8–9 h · 14 km</span></div>
+      <div class="idx-alt">1.920<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#provincia">
+      <div class="idx-num"><span class="hash">N°</span>10</div>
+      <div class="idx-name-block"><span class="idx-name-main">Cerro Provincia</span><span class="idx-name-sub">Sin sombra, sin agua, sin segundas oportunidades</span></div>
+      <div class="idx-tags"><span class="pill hard">Avanzado</span><span class="idx-meta-line">9–11 h · 18 km</span></div>
+      <div class="idx-alt">2.750<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#sanramon">
+      <div class="idx-num"><span class="hash">N°</span>11</div>
+      <div class="idx-name-block"><span class="idx-name-main">Cerro San Ramón</span><span class="idx-name-sub">El gigante de la Sierra — solo para preparados</span></div>
+      <div class="idx-tags"><span class="pill epic">Expedición</span><span class="idx-meta-line">10–14 h · 22 km</span></div>
+      <div class="idx-alt">3.249<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+    <a class="index-row reveal" href="#triplecorona">
+      <div class="idx-num"><span class="hash">N°</span>12</div>
+      <div class="idx-name-block"><span class="idx-name-main">Triple Corona</span><span class="idx-name-sub">Manquehue + Manquehuito + Carbón en un día</span></div>
+      <div class="idx-tags"><span class="pill epic">Expedición</span><span class="idx-meta-line">8–10 h · 18 km</span></div>
+      <div class="idx-alt">1.635<span class="unit">msnm</span></div>
+      <div class="idx-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="legend reveal">
+    <div class="lhead">Escala de exigencia</div>
+    <div class="litem"><span class="pill easy">Iniciación</span><b>Primer cerro</b><span class="desc">Primer cerro o salida con niños. Sin tramos técnicos.</span></div>
+    <div class="litem"><span class="pill medium">Intermedio</span><b>Media jornada</b><span class="desc">Una mañana entera. Buena condición física.</span></div>
+    <div class="litem"><span class="pill hard">Avanzado</span><b>Día completo</b><span class="desc">Día completo. Equipo apropiado obligatorio.</span></div>
+    <div class="litem"><span class="pill epic">Expedición</span><b>Experiencia previa</b><span class="desc">Experiencia previa imprescindible.</span></div>
+  </div>
+</section>
+
+<!-- ─── FICHAS DE CUMBRES ─── -->
+<section class="peak-section" id="fichas">
+  <div class="section-head">
+    <div class="roman">ii.</div>
+    <h2>Las fichas — una por cumbre</h2>
+    <div class="note">Datos verificados<br>Junio 2026</div>
+  </div>
+
+  <!-- N°01 SAN CRISTÓBAL -->
+  <article class="peak reveal" id="sancristobal">
+    <div class="peak-marker">
+      <div class="stamp">N° 01<br>880 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Recoleta · Providencia</b></div>
+        <h3>San <em>Cristóbal</em></h3>
+        <div class="latin">— el cerro de la Virgen, accesible desde el metro —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">880 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~340 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">5 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">2–3 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Muy fácil</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Metro Baquedano + caminata</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis — sendero peatonal</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="g1" patternUnits="userSpaceOnUse" width="8" height="8"><circle cx="2" cy="2" r="0.4" fill="#1c1b18" opacity=".15"/></pattern></defs>
+            <rect width="300" height="160" fill="url(#g1)"/>
+            <path d="M0,140 Q60,120 100,90 T160,55 Q200,35 240,40 Q280,42 300,40 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/>
+            <path d="M0,145 Q60,128 100,98 T160,62 Q200,42 240,48 Q280,48 300,46" stroke="#2f4a32" fill="none" stroke-width="1.2"/>
+            <circle cx="240" cy="48" r="3" fill="#c4622d"/>
+            <text x="248" y="44" font-family="monospace" font-size="9" fill="#1c1b18">880m</text>
+            <text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">INICIO · 540m</text>
+          </svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:Cerro_San_Crist%C3%B3bal_altura.jpg" target="_blank" rel="noopener">
+          <span class="ppl-icon">📷</span>
+          <span class="ppl-text">Ver foto real del cerro</span>
+          <span class="ppl-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">01</div>
+      <p class="tagline">"Si nunca has subido un cerro en tu vida, este es el lugar correcto para descubrir si te gusta o no."</p>
+      <p>El San Cristóbal es la puerta de entrada. No es montaña en sentido estricto — es un parque urbano gigante con una Virgen en la cumbre y un funicular de respaldo si las piernas fallan. Suben familias completas, runners en pantalón corto, abuelas con bastón y perros con correa.</p>
+      <p>La ruta clásica empieza en <strong>Pio Nono</strong>, sube en zigzag por camino pavimentado hasta el santuario. Hay agua, comida, baños y vista a Santiago entera. En días limpios ves la Cordillera como si te debiera dinero.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Metro Baquedano (L1/L5) → caminar 10 min hasta el acceso Pio Nono en Bellavista.</p></div>
+        <div class="col"><h4>Para tener en cuenta</h4><p>Horarios variables (en general 06:30–22:00). Llevar agua aunque haya kioscos. En invierno el sendero puede estar resbaloso por humedad.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Tres caminos a la Virgen</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Pio Nono <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La clásica — pavimentada todo el recorrido</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">2.5 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">340 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">45–75 min</span></div></div>
+                <div class="r-desc">Camino pavimentado con curvas bien marcadas. Ideal para el primer ascenso. <b>Iluminación nocturna parcial.</b></div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Metro Baquedano (L1/L5) → salir por salida sur → caminar 10 min por calle Pio Nono hacia el norte → entrada peatonal al Parque Metropolitano a mano derecha. Coordenadas inicio: -33.4342, -70.6323.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Ruta Pedro de Valdivia Norte <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Menos transitada, más sombra</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">3 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">340 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">50–80 min</span></div></div>
+                <div class="r-desc">Acceso desde Providencia. Más tranquila, con vegetación que da sombra en verano.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Metro Pedro de Valdivia (L1) → caminar 15 min hacia el norte por Av. Pedro de Valdivia Norte → acceso al parque en la calle al fondo.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°02 MANQUEHUITO -->
+  <article class="peak reverse reveal" id="manquehuito">
+    <div class="peak-body">
+      <div class="num-tag">02</div>
+      <p class="tagline">"Corto, noble y con las mejores vistas para quien recién empieza a mirar Santiago desde arriba."</p>
+      <p>El Manquehuito es la cumbre menor del cordón Manquehue. 1.319 metros sin tramos técnicos, sendero ancho y bien marcado, vista a su hermano mayor durante todo el ascenso. Es el cerro que recomendamos a quien ya hizo el San Cristóbal y quiere algo más.</p>
+      <p>El acceso clásico es por <strong>Los Trapenses</strong>, al final de Avenida El Golf de Manquehue en Lo Barnechea. Estacionamiento gratuito, sin horarios. El sendero está abierto todo el año y toma entre 45 minutos y 1 hora 20 de ascenso.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Metro Escuela Militar → bus C14 a Los Trapenses → caminar 1.7 km por El Golf de Manquehue hasta la reja de acceso.</p></div>
+        <div class="col"><h4>Atractivo extra</h4><p>En primavera, las laderas se cubren de flores silvestres. Prohibido subir con mascotas (resolución SAG). Ruta abierta todo el año, 24 horas.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Sendero principal y variantes</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Roja (Los Trapenses) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La más directa — bien señalizada</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">2.2 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">327 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">45–80 min</span></div></div>
+                <div class="r-desc">Sendero claro con pendiente moderada constante. Sin tramos técnicos. <b>Ideal para familias y principiantes.</b></div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Metro Escuela Militar (L1) → bus C14 dirección Los Trapenses → bajar en paradero final → caminar 1.7 km por Av. El Golf de Manquehue hasta la reja de acceso. En auto: Av. El Golf de Manquehue hasta el final, estacionamiento gratuito. Coordenadas inicio: -33.3748, -70.5442.</div>
+              </div>
+            </div>
+          </div>
+          <div class="trivia-section">
+            <div class="detail-eyebrow">¿Sabías que...?</div>
+            <div class="trivia-grid">
+              <div class="trivia-card"><div class="t-num">Dato 01</div><div class="t-title">Manquehuito significa "lugar pequeño de cóndores"</div><div class="t-body">Del mapudungún <em>mañke</em> (cóndor) + <em>we</em> (lugar) + diminutivo. Es la cría del Manquehue.</div></div>
+              <div class="trivia-card"><div class="t-num">Dato 02</div><div class="t-title">Visible desde toda la ciudad</div><div class="t-body">Es uno de los pocos cerros que puedes ver desde <em>Plaza Italia</em> y luego subir la misma tarde.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 02<br>1.319 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Vitacura · Lo Barnechea</b></div>
+        <h3>Manque<em>huito</em></h3>
+        <div class="latin">— el hijo chico, perfecto para familias —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.319 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">327 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">4.4 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">2–3 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Baja</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Av. El Golf de Manquehue</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis · 24 h abierto</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,150 Q40,138 80,118 Q120,95 160,68 Q200,45 230,38 Q260,38 300,50 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,150 Q40,138 80,118 Q120,95 160,68 Q200,45 230,38 Q260,38 300,50" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="230" cy="38" r="3" fill="#c4622d"/><text x="180" y="32" font-family="monospace" font-size="9" fill="#1c1b18">1319m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">REJA · 1004m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/trail/chile/santiago/cerro-manquehuito-2/photos" target="_blank" rel="noopener">
+          <span class="ppl-icon">📷</span>
+          <span class="ppl-text">Ver fotos reales del cerro</span>
+          <span class="ppl-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°03 AGUAS DE RAMÓN -->
+  <article class="peak reveal" id="aguasramon">
+    <div class="peak-marker">
+      <div class="stamp">N° 03<br>1.150 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>La Reina · Las Condes</b></div>
+        <h3>Aguas de <em>Ramón</em></h3>
+        <div class="latin">— el único trekking de Santiago con cascada —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud máx</div><div class="val">1.150 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~400 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">14 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">4–5 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Baja-Media</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Av. Las Condes / Parque Aguas de Ramón</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">$3.000 CLP adultos (aprox.)</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,130 Q30,125 60,115 Q100,100 140,80 Q180,60 220,50 Q260,45 300,55 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,130 Q30,125 60,115 Q100,100 140,80 Q180,60 220,50 Q260,45 300,55" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="220" cy="50" r="3" fill="#c4622d"/><text x="228" y="46" font-family="monospace" font-size="9" fill="#1c1b18">1150m</text><path d="M150,75 L150,100 Q152,105 148,105 Q146,103 150,100" stroke="#4488aa" fill="none" stroke-width="1.5" opacity=".6"/><text x="155" y="90" font-family="monospace" font-size="8" fill="#4488aa">cascada</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/parks/chile/santiago/parque-natural-aguas-de-ramon/photos" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver fotos reales del parque</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">03</div>
+      <p class="tagline">"El bosque que se olvidó de que vive dentro de una metrópolis."</p>
+      <p>La Quebrada de Ramón es un corredor biológico de bosque nativo esclerófilo con agua corriente durante gran parte del año. El sendero atraviesa quillayes, litres y peumos, cruza el estero varias veces por pasarelas de madera, y termina en una cascada de 15 metros que en invierno y primavera corre con fuerza.</p>
+      <p>Es el trekking más "natural" accesible desde Santiago centro. El parque tiene guardaparques, baños, y senderos bien mantenidos. <strong>Ideal para quienes buscan naturaleza sin exposición extrema al sol.</strong></p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Av. Las Condes hacia el oriente → ingreso por calle Padre Hurtado Sur. Bus desde metro Las Condes.</p></div>
+        <div class="col"><h4>Tip importante</h4><p>Horario de ingreso limitado (generalmente 08:30–13:00 último ingreso). Verificar en temporada. Llevar zapatos con agarre — cruces de agua.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Senderos del parque</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Sendero a la Cascada <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta principal — hasta la cascada de 15m</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">7 km i/v</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">300 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">3–4 h</span></div></div>
+                <div class="r-desc">Sendero bien mantenido con pasarelas de madera para cruzar el estero. <b>Bosque nativo esclerófilo</b> durante todo el recorrido. La cascada tiene agua de mayo a noviembre.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Metro Las Condes (L1) → microbuses hacia Av. Las Condes oriente → bajar en calle Padre Hurtado Sur → caminar 600m hasta la entrada del parque. En auto: Av. Las Condes → Padre Hurtado Sur, estacionamiento en el parque. Coordenadas portería: -33.4068, -70.5210.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Sendero Alto (Circuito completo) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Extendido hasta el mirador alto</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">14 km i/v</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">400 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">4–5 h</span></div></div>
+                <div class="r-desc">Continúa más allá de la cascada por sendero menos marcado. Vistas abiertas al valle. <b>Más exigente que el tramo inferior.</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°04 POCHOCO -->
+  <article class="peak reverse reveal" id="pochoco">
+    <div class="peak-body">
+      <div class="num-tag">04</div>
+      <p class="tagline">"El cerro donde los santiaguinos entrenan en secreto para cosas más grandes."</p>
+      <p>Pochoco es el gran entrenador del sector oriente. Tiene la pendiente justa para exigir, suficiente distancia para cansar, y una cumbre con vista 360° que funciona como recompensa honesta. Es el paso intermedio natural entre los cerros fáciles y el Manquehue completo.</p>
+      <p>El sendero principal sube directamente desde el estacionamiento en <strong>La Dehesa</strong>. Terreno de tierra compacta con algunas secciones rocosas en la parte alta. En verano, la exposición solar es intensa — no hay sombra en los últimos 600 metros.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Av. La Dehesa → camino a Farellones (primeros 2 km) → acceso señalizado a mano izquierda. Estacionamiento limitado.</p></div>
+        <div class="col"><h4>Precaución</h4><p>Sin agua en la ruta. Llevar mínimo 1.5L por persona. En verano, salir antes de las 08:00 para evitar el sol directo en la cumbre.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Dos caminos al Pochoco</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Directa (La Dehesa) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La clásica — directa y empinada desde el estacionamiento</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">3 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">720 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">1.5–2.5 h subida</span></div></div>
+                <div class="r-desc">Desde el estacionamiento en camino a Farellones. Subida constante sin descanso. <b>Terreno de tierra compacta</b>, con secciones rocosas en la parte alta. Sin sombra en los últimos 600m.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. La Dehesa → tomar camino a Farellones → a 2 km, estacionamiento señalizado a mano izquierda. Transporte público limitado: Metro Escuela Militar → bus C18 hasta La Dehesa → caminar o tomar colectivo. Coordenadas inicio: -33.3510, -70.4830. Llegar temprano los fines de semana — el estacionamiento se llena.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Ruta Portezuelo (variante) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Más larga pero con mejor pendiente gradual</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">4.5 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">720 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">2–3 h subida</span></div></div>
+                <div class="r-desc">Rodea por el lado norte antes de atacar la cumbre. Pendiente más gradual, más vegetación en el primer tramo. <b>Mejor opción para el descenso si las rodillas piden tregua.</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 04<br>1.804 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Lo Barnechea</b></div>
+        <h3><em>Pochoco</em></h3>
+        <div class="latin">— el entrenador clandestino de la precordillera —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.804 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~720 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">6 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">3–4 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Intermedio</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Camino a Farellones</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis · Sin horarios</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,150 Q50,140 90,120 Q130,90 170,55 Q200,35 240,30 Q270,32 300,40 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,150 Q50,140 90,120 Q130,90 170,55 Q200,35 240,30 Q270,32 300,40" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="240" cy="30" r="3" fill="#c4622d"/><text x="200" y="24" font-family="monospace" font-size="9" fill="#1c1b18">1804m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">INICIO · 1084m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:Cerro_Pochoco.jpg" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver foto real del cerro</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°05 MANQUEHUE -->
+  <article class="peak reveal" id="manquehue">
+    <div class="peak-marker">
+      <div class="stamp">N° 05<br>1.635 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Vitacura · Lo Barnechea</b></div>
+        <h3>Man<em>quehue</em></h3>
+        <div class="latin">— mañkewe: lugar de cóndores —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.635 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~750 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">6.4 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">4–5 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Intermedio-Alto</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Los Trapenses / Parque Metropolitano</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis · Acceso abierto</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,150 Q40,145 70,130 Q100,110 130,80 Q160,50 190,30 Q210,22 230,20 Q260,25 300,45 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,150 Q40,145 70,130 Q100,110 130,80 Q160,50 190,30 Q210,22 230,20 Q260,25 300,45" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="230" cy="20" r="3" fill="#c4622d"/><text x="235" y="16" font-family="monospace" font-size="9" fill="#1c1b18">1635m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">TRAPENSES · 890m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:25juli09_Manquehue_01.jpg" target="_blank" rel="noopener">
+          <span class="ppl-icon">📷</span>
+          <span class="ppl-text">Ver foto real del cerro</span>
+          <span class="ppl-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">05</div>
+      <p class="tagline">"La cumbre más alta del valle de Santiago. Desde arriba, la ciudad cabe en la palma de tu mano."</p>
+      <p>El Cerro Manquehue es el cerro icónico de Santiago. Es el punto más alto del valle (1.635 msnm) y ofrece una vista de 360° que abarca toda la cuenca, desde el Plomo hasta la costa en días despejados. El ascenso es exigente — pendiente sostenida, terreno suelto y sin sombra en gran parte del recorrido.</p>
+      <p>El sendero principal desde <strong>Los Trapenses</strong> es empinado y directo. Los últimos 200 metros de desnivel son los más duros, con terreno rocoso y suelto que exige atención. <strong>La cumbre es una roca plana expuesta al viento</strong> — llevar cortaviento siempre.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Acceso actualizado (2025-2026)</h4><p>Acceso libre desde Los Trapenses. Ruta señalizada pero no controlada. No se requiere permiso ni registro. Trail abierto todo el año.</p></div>
+        <div class="col"><h4>Seguridad</h4><p>Llevar mínimo 2L de agua. En verano empezar antes de las 7:00. Último tramo expuesto — no subir con viento fuerte o nubes bajas. Bastones recomendados para el descenso.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Tres accesos al techo de Santiago</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Los Trapenses (clásica) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta más popular — directa y bien marcada</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">3.2 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">750 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">2–3 h subida</span></div></div>
+                <div class="r-desc">Desde el final de Av. El Golf de Manquehue. Sendero claro pero empinado. <b>Terreno suelto en el último tercio.</b> Sin agua ni sombra después de los primeros 500m.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Mismo acceso que Manquehuito — Av. El Golf de Manquehue hasta el final (Los Trapenses). En el inicio, tomar el sendero marcado en rojo que sube directo al Manquehue (no confundir con el desvío a Manquehuito). Coordenadas inicio: -33.3748, -70.5442.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Ruta La Pirámide (alternativa) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Más larga pero con mejor pendiente</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">5 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">750 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">2.5–3.5 h subida</span></div></div>
+                <div class="r-desc">Acceso por calle La Pirámide en Huechuraba. Ruta menos transitada, más solitaria. Pendiente más gradual.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Desde Huechuraba, subir por calle Santa María de Manquehue hasta el final donde comienza el sendero. En auto: por Américo Vespucio norte → salida Huechuraba → calle La Pirámide. Menos estacionamiento disponible que la ruta clásica.</div>
+              </div>
+            </div>
+          </div>
+          <div class="trivia-section">
+            <div class="detail-eyebrow">¿Sabías que...?</div>
+            <div class="trivia-grid">
+              <div class="trivia-card"><div class="t-num">Dato 01</div><div class="t-title">Cóndores reales</div><div class="t-body">El nombre no es casual. Se han avistado <em>cóndores andinos</em> sobrevolando la cumbre, especialmente en invierno con corrientes térmicas.</div></div>
+              <div class="trivia-card"><div class="t-num">Dato 02</div><div class="t-title">El cerro más subido de Chile</div><div class="t-body">Con más de <em>100.000 ascensiones anuales</em> estimadas, es posiblemente el cerro más transitado del país.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°06 CARBÓN -->
+  <article class="peak reverse reveal" id="carbon">
+    <div class="peak-body">
+      <div class="num-tag">06</div>
+      <p class="tagline">"El siguiente paso lógico después del Manquehue — mismo cordón, diferente perspectiva."</p>
+      <p>El Cerro Carbón es el vecino inmediato del Manquehue hacia el sur, formando parte del mismo cordón montañoso. Su cumbre a 1.520 msnm ofrece una vista diferente: el Manquehue se ve imponente desde aquí, y hacia el otro lado se despliega toda la zona oriente de Santiago.</p>
+      <p>El acceso habitual es continuando desde la cumbre del Manquehuito o por senderos desde la ladera poniente del cordón. Es un cerro menos concurrido que sus hermanos, lo que lo hace atractivo para quienes buscan <strong>tranquilidad sin alejarse mucho de la ciudad</strong>.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Desde la cumbre de Manquehuito seguir por el filo hacia el sur. También accesible desde Lo Curro.</p></div>
+        <div class="col"><h4>Nota</h4><p>Sendero menos marcado que Manquehue/Manquehuito. Recomendable llevar GPS o track descargado. Terreno mixto — tierra y roca.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Accesos al Cerro Carbón</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Desde Manquehuito (travesía por filo) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Continuación natural desde la cumbre del hermano menor</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">2.5 km desde Manquehuito</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">+200 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">1–1.5 h extra</span></div></div>
+                <div class="r-desc">Desde la cumbre de Manquehuito seguir el filo hacia el sur. <b>Sendero menos marcado</b> — seguir las huellas y cairns. Terreno expuesto con vistas al valle.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Mismo acceso que Manquehuito (Los Trapenses). Una vez en la cumbre de Manquehuito, seguir el filo montañoso hacia el sur. Requiere track GPS descargado previamente en app offline (Wikiloc, AllTrails, Maps.me).</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Ruta circular desde Lo Curro <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Acceso independiente, ruta circular de 8.9 km</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">8.9 km circular</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">530 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">4 h total</span></div></div>
+                <div class="r-desc">Desde sector Lo Curro por la ladera poniente. Ruta circular que permite subir por un lado y bajar por otro. <b>Considerada difícil en AllTrails.</b></div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. Lo Curro hacia el oriente hasta el final de la calle donde comienza el sendero. Transporte público: Metro Escuela Militar → bus hacia Lo Curro. Estacionamiento informal en la calle.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 06<br>1.520 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Vitacura · Lo Barnechea</b></div>
+        <h3>Cerro <em>Carbón</em></h3>
+        <div class="latin">— el vecino tranquilo del cordón —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.520 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~530 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">8 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">4–5 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Intermedio</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Lo Curro / desde Manquehuito</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,140 Q50,130 90,100 Q130,70 160,50 Q190,38 210,35 Q240,38 270,50 Q290,60 300,65 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,140 Q50,130 90,100 Q130,70 160,50 Q190,38 210,35 Q240,38 270,50 Q290,60 300,65" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="210" cy="35" r="3" fill="#c4622d"/><text x="215" y="30" font-family="monospace" font-size="9" fill="#1c1b18">1520m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/trail/chile/santiago/cerro-el-carbon--2/photos" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver fotos reales del cerro</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°07 EL PEÑÓN -->
+  <article class="peak reveal" id="penon">
+    <div class="peak-marker">
+      <div class="stamp">N° 07<br>1.940 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Lo Barnechea</b></div>
+        <h3>Cerro El <em>Peñón</em></h3>
+        <div class="latin">— ventana directa a los Andes —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.940 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~850 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">8 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">5–6 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Intermedio-Alto</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Valle La Dehesa / Farellones</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,150 Q40,145 80,125 Q120,100 160,65 Q200,35 230,22 Q260,20 280,25 Q295,30 300,35 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,150 Q40,145 80,125 Q120,100 160,65 Q200,35 230,22 Q260,20 280,25 Q295,30 300,35" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="260" cy="20" r="3" fill="#c4622d"/><text x="220" y="14" font-family="monospace" font-size="9" fill="#1c1b18">1940m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/trail/chile/santiago/cerro-alto-del-naranjo/photos" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver fotos del sector</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">07</div>
+      <p class="tagline">"Donde la precordillera empieza a hablar en serio."</p>
+      <p>El Peñón marca la transición entre los cerros urbanos y la montaña real. A casi 2.000 metros, la vista hacia el este revela el cordón andino sin filtros — El Plomo, La Parva, y todo el glaciar de la Paloma en días claros de invierno.</p>
+      <p>El sendero es exigente en la segunda mitad, con pendiente sostenida y terreno cada vez más rocoso. <strong>Es el cerro perfecto para probar si estás listo para Provincia o San Ramón.</strong></p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Acceso</h4><p>Desde La Dehesa, camino a Farellones. Varios senderos convergen en la cumbre. Llevar track GPS recomendado.</p></div>
+        <div class="col"><h4>Condiciones</h4><p>En invierno puede haber nieve desde los 1.700m. Viento fuerte en la cumbre. Sin agua en la ruta — llevar 2L mínimo.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Acceso al Peñón</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta La Dehesa / Farellones <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Acceso principal por el camino a centros de ski</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">4 km</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">850 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">2.5–3.5 h subida</span></div></div>
+                <div class="r-desc">Desde la zona de La Dehesa, tomando senderos laterales al camino a Farellones. <b>Varios senderos convergen en la cumbre</b> — llevar track GPS descargado. Terreno rocoso en el último tercio.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. La Dehesa → camino a Farellones → buscar acceso lateral señalizado antes de la primera curva pronunciada. Transporte público difícil — se recomienda vehículo propio o pooling con otros excursionistas. Estacionamiento informal en la berma del camino.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°08 ALTO LAS VIZCACHAS -->
+  <article class="peak reverse reveal" id="vizcachas">
+    <div class="peak-body">
+      <div class="num-tag">08</div>
+      <p class="tagline">"Largo, solitario y con las mejores vizcachas del valle como compañía."</p>
+      <p>Alto Las Vizcachas es un cerro del sector suroriente de Santiago, accesible desde la Universidad de los Andes en San Carlos de Apoquindo. La ruta es larga (16 km ida y vuelta) pero técnicamente moderada. Lo que la hace especial es la fauna: vizcachas, águilas moras y zorros son avistamientos frecuentes.</p>
+      <p>El valle de acceso es un corredor natural entre cerros, con pendiente moderada que se intensifica en el último tercio. <strong>Día completo obligatorio.</strong> Salir temprano y llevar suficiente comida y agua para 8+ horas.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Cómo llegar</h4><p>Acceso junto a la Universidad de los Andes, San Carlos de Apoquindo. Estacionamiento disponible.</p></div>
+        <div class="col"><h4>Recomendación</h4><p>Salir antes de las 07:00 en verano. Llevar 3L de agua mínimo. No hay puntos de reabastecimiento. Bastones muy recomendados para el regreso.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Senderos al Alto Las Vizcachas</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Universidad de los Andes <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta clásica — ascenso por el valle entre cerros</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">8 km i/v</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">900 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">3.5–4.5 h subida</span></div></div>
+                <div class="r-desc">Desde junto a la Universidad de los Andes, asciende por un valle entre Alto Las Vizcachas y Morro Las Papas. <b>Pendiente moderada constante que se intensifica</b> en el último tercio. En la bifurcación con Morro Las Papas, tomar a la izquierda por el filo.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. San Carlos de Apoquindo → hasta la Universidad de los Andes → estacionamiento al inicio del sendero. Metro Escuela Militar → bus C13 o C18 → bajar cerca de U. de los Andes → caminar 500m al inicio del trail. Coordenadas inicio: -33.4120, -70.5050.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Circuito Vizcachas + Morro Las Papas <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Loop que encadena ambas cumbres — 10.5 km</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">10.5 km circular</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">1.100 m acum.</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">5–6 h total</span></div></div>
+                <div class="r-desc">Subir a Vizcachas, descender al portezuelo y subir a Morro Las Papas antes de bajar por la ruta alternativa. <b>Solo para quienes llevan buen ritmo y salen temprano.</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 08<br>1.854 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Las Condes · Lo Barnechea</b></div>
+        <h3>Alto Las <em>Vizcachas</em></h3>
+        <div class="latin">— la cumbre con audiencia peluda —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.854 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~900 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">16 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">7–9 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Avanzado</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">U. de los Andes, San Carlos</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,145 Q30,140 60,130 Q100,115 140,90 Q180,60 220,35 Q250,25 270,28 Q290,32 300,38 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,145 Q30,140 60,130 Q100,115 140,90 Q180,60 220,35 Q250,25 270,28 Q290,32 300,38" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="250" cy="25" r="3" fill="#c4622d"/><text x="205" y="20" font-family="monospace" font-size="9" fill="#1c1b18">1854m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/trail/chile/santiago/alto-las-vizcachas/photos" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver fotos reales del cerro</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°09 LA CAMPANA -->
+  <article class="peak reveal" id="campana">
+    <div class="peak-marker">
+      <div class="stamp">N° 09<br>1.920 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Región</span><b>Valparaíso · Olmué</b></div>
+        <h3>La <em>Campana</em></h3>
+        <div class="latin">— donde Darwin contempló el Pacífico en 1834 —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">1.920 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~1.470 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">14 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">8–9 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Avanzado</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Sector Granizo, Olmué</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">$5.000 CLP adulto (CONAF)</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,155 Q30,150 60,140 Q100,120 130,90 Q160,55 190,30 Q210,18 225,15 Q240,18 260,30 Q280,45 300,60 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,155 Q30,150 60,140 Q100,120 130,90 Q160,55 190,30 Q210,18 225,15 Q240,18 260,30 Q280,45 300,60" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="225" cy="15" r="3" fill="#c4622d"/><text x="230" y="12" font-family="monospace" font-size="9" fill="#1c1b18">1920m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">GRANIZO · 450m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:Cerro_La_Campana.jpg" target="_blank" rel="noopener">
+          <span class="ppl-icon">📷</span>
+          <span class="ppl-text">Ver foto real del cerro</span>
+          <span class="ppl-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">09</div>
+      <p class="tagline">"La cumbre donde Charles Darwin escribió: la vista era sublime en su grandeza."</p>
+      <p>La Campana es Reserva de la Biósfera de la UNESCO y uno de los trekkings más emblemáticos de Chile central. El ascenso desde el sector Granizo en Olmué atraviesa palmerales de palma chilena, bosque esclerófilo y roca expuesta hasta una cumbre con vista simultánea al Pacífico y los Andes.</p>
+      <p>Es un cerro exigente: 1.470 metros de desnivel sin descanso real. Los últimos 300 metros son la famosa "canaleta" — una chimenea rocosa con cadenas donde necesitas usar las manos. <strong>No apto para vértigo ni para principiantes.</strong></p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Acceso</h4><p>Desde Santiago: 90 min en auto a Olmué. Ingresar por portería CONAF sector Granizo. Registro obligatorio. Último ingreso ~10:00.</p></div>
+        <div class="col"><h4>Importante</h4><p>Cupos limitados. Reservar en pasesparques.cl. En verano se cierra por riesgo de incendio. Llevar casco recomendado para la canaleta.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Senderos al Cerro La Campana</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Sendero El Andinista (Sector Granizo) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta principal — por Quebrada Honda hasta la canaleta final</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">11.3 km i/v</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">1.470 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">8–9 h total</span></div></div>
+                <div class="r-desc">Desde portería CONAF en Granizo, Olmué. Sube por Quebrada Honda y Quebrada La Campana atravesando bosque esclerófilo y palmerales. <b>Los últimos 300m son la famosa canaleta rocosa con cadenas fijas</b> — necesitas usar las manos. Mirador Otto Zöllner opcional en loop corto.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Desde Santiago (90 min en auto): Ruta 5 Norte → salida Limache/Olmué → Ruta F-50 hacia Olmué → Avenida Granizo, paradero 45 → portería CONAF. En bus: Terminal Pajaritos → bus a Olmué → desde Olmué, colectivo o bus local al sector Granizo. Reservar entrada en <b>pasesparques.cl</b> (cupos limitados). Coordenadas portería: -32.9560, -71.0880.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Sector Ocoa (acceso alternativo) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Desde Hijuelas — palmar de palma chilena monumental</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">~18 km i/v</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">1.500 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">9–11 h total</span></div></div>
+                <div class="r-desc">Ruta más larga que pasa por el palmar más grande de palma chilena del mundo (más de 60.000 ejemplares). <b>Menos transitada y más salvaje.</b> Requiere más tiempo y experiencia.</div>
+              </div>
+            </div>
+          </div>
+          <div class="trivia-section">
+            <div class="detail-eyebrow">¿Sabías que...?</div>
+            <div class="trivia-grid">
+              <div class="trivia-card"><div class="t-num">Dato 01</div><div class="t-title">Darwin estuvo aquí</div><div class="t-body">Charles Darwin escaló La Campana el <em>17 de agosto de 1834</em> y escribió en su diario: "la vista era sublime en su grandeza". Hay una placa conmemorativa en la cumbre.</div></div>
+              <div class="trivia-card"><div class="t-num">Dato 02</div><div class="t-title">Reserva de la Biósfera UNESCO</div><div class="t-body">Desde 1984, el Parque Nacional La Campana es <em>Reserva de la Biósfera</em>. Protege el bosque esclerófilo y la palma chilena (<em>Jubaea chilensis</em>).</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°10 CERRO PROVINCIA -->
+  <article class="peak reverse reveal" id="provincia">
+    <div class="peak-body">
+      <div class="num-tag">10</div>
+      <p class="tagline">"Sin sombra. Sin agua. Sin segundas oportunidades. Si subes, que sea con todo."</p>
+      <p>Cerro Provincia es la prueba de fuego para montañistas de Santiago. 2.750 metros de altitud, 18 km ida y vuelta, y un desnivel de 1.800 metros hacen de esta cumbre un desafío serio. El sendero está completamente expuesto al sol — no hay un solo árbol después del primer kilómetro.</p>
+      <p>Se sube desde el Parque San Carlos de Apoquindo (CONAF) con un ascenso implacable por filo. <strong>En verano, las temperaturas en la ruta superan los 35°C al mediodía.</strong> Es obligatorio salir antes del amanecer. Los últimos 500 metros son terreno suelto con pendiente de 40°+.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Acceso</h4><p>Parque San Carlos de Apoquindo. Ingreso desde las 06:00. Registro obligatorio en CONAF. Estacionamiento disponible.</p></div>
+        <div class="col"><h4>Seguridad crítica</h4><p>Mínimo 4L de agua. Salir antes de las 06:00 en verano. No subir solo. Comunicar plan de ruta. Llevar GPS, linterna frontal (por si el regreso se extiende) y protector solar potente.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Caminos al Cerro Provincia</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Ruta Puente Ñilhue (clásica) <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta más directa — comparte camino con Alto del Naranjo</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">9 km subida</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">1.800 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">5–6 h subida</span></div></div>
+                <div class="r-desc">Desde Puente Ñilhue, comparte 4 km con la ruta al Alto del Naranjo. En la bifurcación, tomar a la izquierda hacia la cumbre de Provincia. <b>Ruta por filo expuesto sin sombra.</b> Varios miradores panorámicos en el camino. Sendero "El Monolito" lleva al mirador del Naranjo y continúa al Provincia.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. Las Condes → Camino San Carlos de Apoquindo → continuar hasta Puente Ñilhue (estacionamiento). Coordenadas: -33.4050, -70.4730. En transporte público: Metro Escuela Militar → bus C13 hasta el final de recorrido → caminar hasta el puente.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Vía San Carlos de Apoquindo <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Acceso desde el parque CONAF — ligeramente más larga</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">10 km subida</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">1.800 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">5.5–7 h subida</span></div></div>
+                <div class="r-desc">Desde el parque San Carlos de Apoquindo (registro CONAF obligatorio). Un par de km más larga pero con mejor infraestructura al inicio. <b>Ingreso desde las 06:00.</b> Estacionamiento disponible.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> En auto: Av. San Carlos de Apoquindo hasta el final → portería del Parque San Carlos de Apoquindo (CONAF). Registro obligatorio en la entrada. Estacionamiento disponible. Coordenadas: -33.4165, -70.4925. Bus C13 llega cerca pero hay que caminar los últimos 2 km.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 10<br>2.750 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>Las Condes · Providencia</b></div>
+        <h3>Cerro <em>Provincia</em></h3>
+        <div class="latin">— sin sombra, sin agua, sin excusas —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">2.750 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~1.800 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">18 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">9–11 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Avanzado</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">San Carlos de Apoquindo (CONAF)</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">$3.000 CLP adulto</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,155 Q30,150 60,135 Q100,110 140,75 Q180,40 220,18 Q250,10 270,12 Q290,18 300,25 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,155 Q30,150 60,135 Q100,110 140,75 Q180,40 220,18 Q250,10 270,12 Q290,18 300,25" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="250" cy="10" r="3" fill="#c4622d"/><text x="210" y="8" font-family="monospace" font-size="9" fill="#1c1b18">2750m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">S.CARLOS · 950m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:Piedras_cerro_provincia.jpg" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver foto real del cerro</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°11 CERRO SAN RAMÓN -->
+  <article class="peak reveal" id="sanramon">
+    <div class="peak-marker">
+      <div class="stamp">N° 11<br>3.249 m</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Comuna</span><b>La Reina · Las Condes</b></div>
+        <h3>Cerro San <em>Ramón</em></h3>
+        <div class="latin">— el gigante de la Sierra de Ramón —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud</div><div class="val">3.249 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel</div><div class="val">~2.400 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">22 <span class="unit">km i/v</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">10–14 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Expedición</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Parque Aguas de Ramón / Alto del Naranjo</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">$3.000–5.000 CLP</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,155 Q20,152 50,140 Q80,125 110,100 Q140,70 170,40 Q195,18 215,10 Q235,8 250,12 Q275,22 300,35 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,155 Q20,152 50,140 Q80,125 110,100 Q140,70 170,40 Q195,18 215,10 Q235,8 250,12 Q275,22 300,35" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="235" cy="8" r="3" fill="#c4622d"/><text x="240" y="6" font-family="monospace" font-size="8" fill="#1c1b18">3249m</text><text x="6" y="155" font-family="monospace" font-size="9" fill="#1c1b18">INICIO · 850m</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://commons.wikimedia.org/wiki/File:Sierraderamon.png" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver foto de la Sierra de Ramón</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="peak-body">
+      <div class="num-tag">11</div>
+      <p class="tagline">"El punto más alto de la Sierra de Ramón. Solo para quienes ya tienen historial."</p>
+      <p>El Cerro San Ramón es la cumbre más alta de la sierra que flanquea Santiago por el este. Con 3.249 metros, exige un nivel de preparación que va más allá del trekking recreativo. La jornada completa supera las 10 horas con 2.400 metros de desnivel acumulado.</p>
+      <p>El acceso más común es desde el Parque Aguas de Ramón continuando por la ruta del Alto del Naranjo. <strong>En invierno hay nieve desde los 2.500m y se requieren crampones.</strong> Es una cumbre que exige experiencia previa en altitud y autonomía total en montaña.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Preparación requerida</h4><p>Haber subido Provincia o similar. Experiencia con jornadas de 10+ horas. Condición física para 2.400m de desnivel.</p></div>
+        <div class="col"><h4>Equipo obligatorio</h4><p>GPS, linterna frontal, ropa de abrigo, cortaviento, 4L agua, comida para todo el día. En invierno: crampones + piolet.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Rutas disponibles</div>
+          <div class="detail-title">Accesos al gigante de la Sierra</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Vía Alto del Naranjo <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">La ruta clásica — desde San Carlos de Apoquindo pasando por el Naranjo</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">11 km subida</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">2.400 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">6–8 h subida</span></div></div>
+                <div class="r-desc">Desde San Carlos de Apoquindo (CONAF), subir al Alto del Naranjo (1.890m) y continuar por filo expuesto hacia la cumbre. <b>El tramo Naranjo → San Ramón es la parte más exigente</b> — terreno suelto, pendiente sostenida, y posible nieve en invierno. Refugio San Ramón en el camino (básico, sin servicios).</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Mismo acceso que Cerro Provincia vía San Carlos de Apoquindo. Portería CONAF al final de Av. San Carlos de Apoquindo. Registro obligatorio. Ingreso a las 06:00 (llegar antes para ser de los primeros). Coordenadas portería: -33.4165, -70.4925.</div>
+              </div>
+            </div>
+            <div class="route-card">
+              <div class="r-num">2</div>
+              <div class="r-content">
+                <h5>Vía Parque Aguas de Ramón <span class="r-status">Abierta</span></h5>
+                <div class="r-tagline">Acceso alternativo desde La Reina</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia</span><span class="v">11 km subida</span></div><div class="rs"><span class="l">Desnivel</span><span class="v">2.400 m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">6–8 h subida</span></div></div>
+                <div class="r-desc">Acceso desde el sector La Reina, pasando por el parque. Ruta menos transitada. <b>Mismo nivel de exigencia que la vía Naranjo</b> — solo cambia el primer tramo de aproximación.</div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Portería del Parque Aguas de Ramón, La Reina. En auto: Av. Las Condes → Padre Hurtado Sur. En bus: desde Metro Las Condes. Ingreso con tarifa ($3.000-5.000 CLP). Horario limitado — verificar con el parque.</div>
+              </div>
+            </div>
+          </div>
+          <div class="trivia-section">
+            <div class="detail-eyebrow">¿Sabías que...?</div>
+            <div class="trivia-grid">
+              <div class="trivia-card"><div class="t-num">Dato 01</div><div class="t-title">El punto más alto de la Región Metropolitana accesible a pie</div><div class="t-body">Con 3.249m, es la cumbre más alta de la <em>Sierra de Ramón</em> y el punto más alto accesible sin equipo técnico de escalada en la RM (El Plomo es más alto pero requiere varios días).</div></div>
+              <div class="trivia-card"><div class="t-num">Dato 02</div><div class="t-title">Refugio de montaña</div><div class="t-body">Existe un <em>refugio básico</em> (Refugio San Ramón) en la ruta, útil para emergencias. No tiene agua ni servicios — es solo un techo. Algunos montañistas hacen la cumbre en 2 días usándolo como campo base.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- N°12 TRIPLE CORONA -->
+  <article class="peak reverse reveal" id="triplecorona">
+    <div class="peak-body">
+      <div class="num-tag">12</div>
+      <p class="tagline">"Manquehue + Manquehuito + Carbón en un solo día. El desafío definitivo del cordón."</p>
+      <p>La Triple Corona es una travesía que encadena las tres cumbres principales del cordón Manquehue en una sola jornada: primero Manquehue (1.635m), luego descenso y ascenso a Manquehuito (1.319m), y finalmente Cerro Carbón (1.520m). Son 18 km con más de 2.000 metros de desnivel acumulado.</p>
+      <p>No es una ruta oficial sino un desafío establecido por la comunidad montañista local. Requiere excelente condición física, planificación cuidadosa y <strong>conocimiento previo de las tres rutas individuales</strong>. Se recomienda haber subido cada cerro al menos una vez antes de intentar la combinación.</p>
+      <div class="peak-info-grid">
+        <div class="col"><h4>Estrategia</h4><p>Salir antes de las 06:00. Empezar por Manquehue (el más exigente) con piernas frescas. Llevar 4L de agua y comida calórica.</p></div>
+        <div class="col"><h4>Requisitos</h4><p>Experiencia previa en los tres cerros individuales. Jornada de 8–10 horas. Condición física para 2.000m+ de desnivel acumulado.</p></div>
+      </div>
+      <button class="detail-toggle" onclick="toggleDetail(this)"><span class="toggle-icon"></span><span class="toggle-text-open">Ver rutas y datos extra</span><span class="toggle-text-close">Cerrar detalles</span></button>
+      <div class="detail-panel">
+        <div class="detail-panel-inner">
+          <div class="detail-eyebrow">Planificación de la travesía</div>
+          <div class="detail-title">Estrategia para la Triple Corona</div>
+          <div class="routes-list">
+            <div class="route-card">
+              <div class="r-num">1</div>
+              <div class="r-content">
+                <h5>Orden recomendado: Manquehue → Manquehuito → Carbón</h5>
+                <div class="r-tagline">Empezar por el más difícil con piernas frescas</div>
+                <div class="route-stats"><div class="rs"><span class="l">Distancia total</span><span class="v">18 km</span></div><div class="rs"><span class="l">Desnivel acum.</span><span class="v">2.000+ m</span></div><div class="rs"><span class="l">Tiempo</span><span class="v">8–10 h</span></div></div>
+                <div class="r-desc"><b>Fase 1:</b> Subir Manquehue por Los Trapenses (2–3h). <b>Fase 2:</b> Descender al portezuelo y subir Manquehuito (1–1.5h). <b>Fase 3:</b> Travesía por filo sur hasta Cerro Carbón (1.5–2h). Descenso por Lo Curro o regreso por el filo. <b>Salir antes de las 06:00 es obligatorio.</b></div>
+                <div class="r-desc" style="margin-top:10px;padding-top:10px;border-top:1px dotted var(--line-soft)"><b>📍 Cómo llegar:</b> Inicio y fin en Los Trapenses (mismo acceso que Manquehue/Manquehuito). Av. El Golf de Manquehue hasta el final. Si se baja por Lo Curro (opción lineal), organizar transporte de recogida en la salida sur. Coordenadas inicio: -33.3748, -70.5442.</div>
+              </div>
+            </div>
+          </div>
+          <div class="trivia-section">
+            <div class="detail-eyebrow">Consejos clave</div>
+            <div class="trivia-grid">
+              <div class="trivia-card"><div class="t-num">Tip 01</div><div class="t-title">Logística de agua</div><div class="t-body">No hay agua en toda la travesía. Llevar <em>4 litros mínimo</em>. Distribuir en mochila para equilibrar el peso. Considerar pastillas de electrolitos.</div></div>
+              <div class="trivia-card"><div class="t-num">Tip 02</div><div class="t-title">Plan B siempre</div><div class="t-body">Si llegas agotado a Manquehuito, <em>baja sin intentar el Carbón</em>. La Triple Corona es un desafío, no una obligación. La montaña siempre estará ahí mañana.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-marker">
+      <div class="stamp">N° 12<br>Travesía</div>
+      <div class="ficha">
+        <div class="ficha-head"><span>Tipo</span><b>Travesía · Desafío</b></div>
+        <h3>Triple <em>Corona</em></h3>
+        <div class="latin">— tres cumbres, un día, cero excusas —</div>
+        <div class="data-rows">
+          <div class="data-row"><div class="lbl">Altitud máx</div><div class="val">1.635 <span class="unit">msnm</span></div></div>
+          <div class="data-row"><div class="lbl">Desnivel acum.</div><div class="val">~2.000 <span class="unit">m</span></div></div>
+          <div class="data-row"><div class="lbl">Distancia</div><div class="val">18 <span class="unit">km</span></div></div>
+          <div class="data-row"><div class="lbl">Duración</div><div class="val">8–10 <span class="unit">h</span></div></div>
+          <div class="data-row"><div class="lbl">Dificultad</div><div class="val">Expedición</div></div>
+          <div class="data-row"><div class="lbl">Acceso</div><div class="val">Los Trapenses</div></div>
+          <div class="data-row"><div class="lbl">Tarifa</div><div class="val">Gratis</div></div>
+        </div>
+        <div class="peak-topo">
+          <svg viewBox="0 0 300 160"><path d="M0,150 Q30,140 60,100 Q80,60 100,40 Q120,55 140,80 Q160,60 180,50 Q200,55 220,40 Q240,30 250,28 Q270,35 300,55 L300,160 L0,160 Z" fill="#2f4a32" opacity=".22"/><path d="M0,150 Q30,140 60,100 Q80,60 100,40 Q120,55 140,80 Q160,60 180,50 Q200,55 220,40 Q240,30 250,28 Q270,35 300,55" stroke="#2f4a32" fill="none" stroke-width="1.2"/><circle cx="100" cy="40" r="3" fill="#c4622d"/><circle cx="180" cy="50" r="2.5" fill="#8a3f17"/><circle cx="250" cy="28" r="2.5" fill="#8a3f17"/><text x="70" y="35" font-family="monospace" font-size="8" fill="#1c1b18">MQ</text><text x="160" y="44" font-family="monospace" font-size="8" fill="#1c1b18">MQT</text><text x="252" y="22" font-family="monospace" font-size="8" fill="#1c1b18">CB</text></svg>
+        </div>
+        <a class="peak-photo-link" href="https://www.alltrails.com/trail/chile/santiago/cerro-manquehue-via-golf-de-manquehue/photos" target="_blank" rel="noopener"><span class="ppl-icon">📷</span><span class="ppl-text">Ver fotos del cordón Manquehue</span><span class="ppl-arrow">→</span></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ─── CLIMA JUNIO ─── -->
+<section class="weather-section reveal" id="clima">
+  <div class="section-head">
+    <div class="roman">iii.</div>
+    <h2>Clima — Junio en Santiago</h2>
+    <div class="note">Datos promedio<br>Fuente: Weather.com / Meteoblue</div>
+  </div>
+  <p style="font-size:17px;color:var(--ink-soft);max-width:700px;margin-bottom:8px;font-style:italic">Junio es pleno invierno en Santiago. Días cortos, noches frías y posibilidad real de lluvia. Las rutas de montaña pueden tener barro, hielo o nieve sobre los 2.000m.</p>
+  <div class="weather-grid">
+    <div class="weather-card">
+      <span class="w-icon">🌡️</span>
+      <div class="w-temp">14° / 3°</div>
+      <div class="w-label">Máxima / Mínima</div>
+      <div class="w-detail">En cumbre, restar 6–8°C por cada 1.000m de altitud ganada</div>
+    </div>
+    <div class="weather-card">
+      <span class="w-icon">🌧️</span>
+      <div class="w-temp">86 mm</div>
+      <div class="w-label">Precipitación promedio</div>
+      <div class="w-detail">5–7 días de lluvia esperados. Revisar pronóstico 48h antes de salir</div>
+    </div>
+    <div class="weather-card">
+      <span class="w-icon">☀️</span>
+      <div class="w-temp">4 h</div>
+      <div class="w-label">Horas de sol diarias</div>
+      <div class="w-detail">Amanecer ~07:45 · Atardecer ~17:40. Planificar con margen de luz</div>
+    </div>
+  </div>
+  <div style="margin-top:32px;padding:24px;background:var(--paper-2);border-left:4px solid var(--ochre);font-size:15px;line-height:1.6;color:var(--ink)">
+    <strong style="color:var(--ochre-deep);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:8px">⚠️ Nota de invierno</strong>
+    En esta época del año, las rutas de alta montaña (Provincia, San Ramón) pueden estar parcialmente cerradas o requerir equipo técnico invernal. Siempre verificar condiciones con CONAF o la comunidad antes de salir. <em>Fuentes: <a href="https://weather.com" style="color:var(--ochre-deep)">Weather.com</a>, <a href="https://www.meteoblue.com" style="color:var(--ochre-deep)">Meteoblue</a></em>
+  </div>
+</section>
+
+<!-- ─── MANUAL DE EQUIPAMIENTO ─── -->
+<section class="manual-section" id="manual">
+  <div class="inner">
+    <h2>Manual de <em>campo</em></h2>
+    <div class="sub">Equipamiento esencial — lo que llevas puede salvarte la vida</div>
+    <div class="gear-grid">
+      <div class="gear-card">
+        <div class="gnum">01 — PIES</div>
+        <span class="gicon">🥾</span>
+        <h4>Calzado <em>técnico</em></h4>
+        <p>El item más importante de tu mochila. Un esguince a 2 horas de la civilización no es lo mismo que uno en la vereda.</p>
+        <ul>
+          <li>Zapatillas trail running (cerros fáciles)</li>
+          <li>Bota media caña (intermedios)</li>
+          <li>Bota rígida con suela Vibram (avanzados)</li>
+          <li>Siempre con al menos 2 salidas previas de "ablande"</li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <div class="gnum">02 — AGUA</div>
+        <span class="gicon">💧</span>
+        <h4>Hidratación <em>sin negociar</em></h4>
+        <p>La regla de oro: 0.5L por hora de esfuerzo + 0.5L de reserva. En verano, duplicar.</p>
+        <ul>
+          <li>Mínimo 1.5L (cerros cortos)</li>
+          <li>2–3L (intermedios, sin agua en ruta)</li>
+          <li>4L+ (Provincia, San Ramón)</li>
+          <li>Camelback o botellas accesibles sin parar</li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <div class="gnum">03 — CAPAS</div>
+        <span class="gicon">🧥</span>
+        <h4>Vestimenta <em>por capas</em></h4>
+        <p>En montaña, la temperatura puede variar 15°C entre el inicio y la cumbre. Sistema de tres capas siempre.</p>
+        <ul>
+          <li>Base: polera técnica (NO algodón)</li>
+          <li>Abrigo: polar o softshell</li>
+          <li>Exterior: cortaviento impermeable</li>
+          <li>Gorro, guantes, buff (invierno obligatorio)</li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <div class="gnum">04 — SEGURIDAD</div>
+        <span class="gicon">🆘</span>
+        <h4>Kit de <em>emergencia</em></h4>
+        <p>Lo que esperas nunca usar pero que puede cambiar todo. Lleva siempre un kit mínimo.</p>
+        <ul>
+          <li>Linterna frontal (con pilas extra)</li>
+          <li>Silbato de emergencia</li>
+          <li>Manta de supervivencia</li>
+          <li>Botiquín básico (vendas, paracetamol, antialérgico)</li>
+          <li>Cargador portátil + celular con track offline</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DECISIÓN ─── -->
+<section class="decide-section" id="decision">
+  <div class="section-head">
+    <div class="roman">iv.</div>
+    <h2>¿Cuál subir primero?</h2>
+    <div class="note">Guía rápida<br>de decisión</div>
+  </div>
+  <div class="decide-grid">
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 01</div>
+      <h3>¿Primera vez?</h3>
+      <div class="answer">San Cristóbal</div>
+      <p>Si nunca has hecho trekking, empieza aquí. Camino pavimentado, corto, con salida de emergencia (funicular).</p>
+    </div>
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 02</div>
+      <h3>¿Con familia?</h3>
+      <div class="answer">Manquehuito</div>
+      <p>Sendero bien marcado, tiempo razonable, sin tramos técnicos. La cumbre tiene espacio para sentarse y comer.</p>
+    </div>
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 03</div>
+      <h3>¿Quiero naturaleza?</h3>
+      <div class="answer">Aguas de Ramón</div>
+      <p>Bosque nativo, agua corriente, cascada. El único trekking de Santiago que parece otro país.</p>
+    </div>
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 04</div>
+      <h3>¿Quiero desafío?</h3>
+      <div class="answer">Cerro Provincia</div>
+      <p>Si ya subiste Manquehue y quieres el siguiente nivel. Día completo, exigente, sin margen de error.</p>
+    </div>
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 05</div>
+      <h3>¿Algo histórico?</h3>
+      <div class="answer">La Campana</div>
+      <p>Darwin la subió en 1834. Palmas milenarias, canaleta con cadenas, y vista al Pacífico y los Andes simultáneamente.</p>
+    </div>
+    <div class="decide-card reveal">
+      <div class="q">Pregunta 06</div>
+      <h3>¿Expedición seria?</h3>
+      <div class="answer">San Ramón / Triple Corona</div>
+      <p>Solo con experiencia previa. 10+ horas, 2000m+ de desnivel. La montaña real empieza aquí.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ESTACIONES ─── -->
+<section class="season-section" id="estaciones">
+  <div class="season-inner">
+    <div class="section-head">
+      <div class="roman">v.</div>
+      <h2>Guía por estación del año</h2>
+      <div class="note">Santiago tiene<br>4 estaciones muy marcadas</div>
+    </div>
+    <div class="season-table">
+      <div class="season-row head">
+        <div class="label">Estación</div>
+        <div class="cell">Temperatura</div>
+        <div class="cell">Condiciones</div>
+        <div class="cell">Mejor para</div>
+        <div class="cell">Veredicto</div>
+      </div>
+      <div class="season-row">
+        <div class="label">Verano</div>
+        <div class="cell"><b>28–34°C</b>Noches ~14°C. Sol intenso.</div>
+        <div class="cell">Seco. UV extremo. Sin agua en rutas. Incendios forestales frecuentes.</div>
+        <div class="cell">Salidas muy tempranas (pre-06:00). Cerros con sombra parcial.</div>
+        <div class="cell"><span class="verdict ok">Con precaución</span></div>
+      </div>
+      <div class="season-row">
+        <div class="label">Otoño</div>
+        <div class="cell"><b>18–24°C</b>Noches ~6°C. Templado.</div>
+        <div class="cell">Aire limpio post-lluvias. Temperaturas ideales. Colores en la vegetación.</div>
+        <div class="cell">Todas las rutas. Mejor época para cerros intermedios y avanzados.</div>
+        <div class="cell"><span class="verdict good">Temporada ideal</span></div>
+      </div>
+      <div class="season-row">
+        <div class="label">Invierno</div>
+        <div class="cell"><b>10–15°C</b>Noches ~2°C. Heladas.</div>
+        <div class="cell">Lluvia frecuente. Nieve sobre 2000m. Barro. Días cortos (10h luz).</div>
+        <div class="cell">Cerros bajos en días despejados. Evitar alta montaña sin equipo técnico.</div>
+        <div class="cell"><span class="verdict bad">Solo preparados</span></div>
+      </div>
+      <div class="season-row">
+        <div class="label">Primavera</div>
+        <div class="cell"><b>20–26°C</b>Noches ~8°C. Variable.</div>
+        <div class="cell">Flores silvestres. Deshielo. Agua en quebradas. Viento ocasional.</div>
+        <div class="cell">Todas las rutas. Época espectacular para La Campana (palmas + flores).</div>
+        <div class="cell"><span class="verdict good">Temporada ideal</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EMERGENCIA ─── -->
+<section class="emergency-section" id="emergencia">
+  <div class="emergency-inner">
+    <div>
+      <h2>En caso de <em>emergencia</em></h2>
+      <p class="lede">Lleva estos números grabados en tu teléfono. En montaña, la diferencia entre un susto y una tragedia es el tiempo de respuesta.</p>
+    </div>
+    <div class="emergency-list">
+      <div class="em-item">
+        <div class="org">SAMU</div>
+        <div class="desc">Ambulancia · emergencia médica</div>
+        <div class="number">131</div>
+      </div>
+      <div class="em-item">
+        <div class="org">Bomberos</div>
+        <div class="desc">Rescate · incendio forestal</div>
+        <div class="number">132</div>
+      </div>
+      <div class="em-item">
+        <div class="org">Carabineros</div>
+        <div class="desc">Policía · búsqueda y rescate</div>
+        <div class="number">133</div>
+      </div>
+      <div class="em-item">
+        <div class="org">CONAF</div>
+        <div class="desc">Incendios forestales · parques nacionales</div>
+        <div class="number">130</div>
+      </div>
+      <div class="em-item">
+        <div class="org">Rescate Andino</div>
+        <div class="desc">Cuerpo de Socorro Andino de Chile</div>
+        <div class="number">+56 2 2699 2929</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DEDICATORIA ─── -->
+<section class="dedication-section reveal" id="dedicatoria">
+  <span class="ded-icon">🏔️</span>
+  <h3>Para Inés</h3>
+  <p>Porque cada sendero recorrido, cada cumbre alcanzada y cada amanecer en la montaña tiene más sentido cuando hay alguien esperando escuchar la historia al volver. Este cuaderno es tuyo — cada paso documentado aquí lleva tu nombre grabado en la roca.</p>
+  <p style="margin-top:20px;font-size:18px;color:var(--ink);font-style:normal;background:var(--paper-2);padding:20px 24px;border-left:3px solid var(--ochre);max-width:600px;text-align:left;display:inline-block">Esta guía nos servirá para conocer juntos lugares mágicos de lo que para mí es un nuevo país y para ti es una ciudad lejos de donde creciste. Cada cumbre es una excusa para hacer historia juntos.</p>
+  <p style="margin-top:16px;font-size:17px;color:var(--moss-deep)">"Quiero acumular historias conociendo esos lugares bonitos contigo."</p>
+  <p style="margin-top:12px;font-size:17px;color:var(--ink-soft)">"Las mejores vistas se comparten. Las mejores aventuras se dedican."</p>
+  <div class="ded-sig">Con cariño ♡</div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="colophon">"Un cuaderno honesto para los que suben cerros en Santiago — sin filtros, sin atajos, sin mentiras sobre los tiempos."</div>
+    </div>
+    <div>
+      <h4>Referencias</h4>
+      <ul>
+        <li><a href="https://www.wikiexplora.com" target="_blank" rel="noopener">Wikiexplora.com</a></li>
+        <li><a href="https://www.andeshandbook.org" target="_blank" rel="noopener">AndesHandbook.org</a></li>
+        <li><a href="https://www.alltrails.com" target="_blank" rel="noopener">AllTrails</a></li>
+        <li><a href="https://www.conaf.cl" target="_blank" rel="noopener">CONAF Chile</a></li>
+        <li><a href="https://weather.com" target="_blank" rel="noopener">Weather.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#indice">Índice de cumbres</a></li>
+        <li><a href="#fichas">Fichas detalladas</a></li>
+        <li><a href="#manual">Manual de campo</a></li>
+        <li><a href="#estaciones">Guía por estación</a></li>
+        <li><a href="#emergencia">Emergencia</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Cuaderno de Aventuras Trekking © 2026</span>
+    <span>33° 27′ S — 70° 39′ W · Santiago, Chile</span>
+  </div>
+</footer>
+
+</div><!-- /.stage -->
+
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+// ─── Scroll reveal animations ───
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// ─── Detail panel toggle ───
+function toggleDetail(btn) {
+  btn.classList.toggle('open');
+  const panel = btn.nextElementSibling;
+  panel.classList.toggle('open');
+}
+
+// ─── Quote carousel ───
+const quotes = document.querySelectorAll('.quote-item');
+const dotsContainer = document.getElementById('quoteDots');
+let currentQuote = 0;
+
+// Create dots
+quotes.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.setAttribute('aria-label', `Frase ${i + 1}`);
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToQuote(i));
+  dotsContainer.appendChild(dot);
+});
+
+function goToQuote(index) {
+  quotes[currentQuote].classList.remove('active');
+  dotsContainer.children[currentQuote].classList.remove('active');
+  currentQuote = index;
+  quotes[currentQuote].classList.add('active');
+  dotsContainer.children[currentQuote].classList.add('active');
+}
+
+setInterval(() => {
+  goToQuote((currentQuote + 1) % quotes.length);
+}, 6000);
+
+// ─── Progress bar ───
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrolled / maxScroll) * 100;
+  progressBar.style.width = progress + '%';
+});
+
+// ─── Back to top ───
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ─── Active nav link on scroll ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.masthead nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ─── Smooth scroll for nav links ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
